@@ -41,6 +41,10 @@ hr{
     margin-bottom: -1vh;
 }
 
+#datos{
+    display: flex;
+}
+
 #datos input{
     align-items: center;
     justify-content: center;
@@ -53,28 +57,19 @@ hr{
     margin: 2vh 2vh;
 }
 
-#datos button{
-    border: none;
-    cursor: pointer;
-    background-color: #153f7d;
-    border-radius: 10vh;
-    height: 8vh;
-    text-align: center;
-    color: white;
-    font-size: medium;
-    font-weight: bold;
-    width: 30vh;
-    transition: 0.3s ease-in-out;
-}
-
-#datos button:hover{
-    transform: translateY(-10px);
-}
-
 #datos input::placeholder{
     color: white;
     font-size: medium;
     font-weight: bold;
+}
+
+#datos label{
+    background-color: #153f7d;
+    color: white;
+}
+
+#fileInput{
+    display: none;
 }
 
 #name{
@@ -88,7 +83,7 @@ hr{
 #text{
     width: 150vh;
     height: 40vh;
-    border-radius: 10vh;
+    border-radius: 3vh;
     border: none;
     font-size: large;
 }
@@ -110,4 +105,24 @@ hr{
 
 #Send:hover {
     transform: translateY(-10px);  
+}
+label{
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+    border-radius: 10vh;
+    height: 8vh;
+    width: 30vh;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+#pictures{
+    text-align: center;
+    color: white;
+    background-color: #153f7d;
+    border: none;
+    margin: 2vh 2vh;
+    align-items: center;
+    justify-content: center;
 }
