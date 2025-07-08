@@ -1,0 +1,113 @@
+html{
+    height: 100vh;
+    width: 100%;
+    background-color: #182d3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans';
+}
+ 
+#marca_de_propiedad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1vh 2vh;
+    color: white;
+    font-size: 0.9em;
+}
+
+hr{
+    width: 160vh;
+    height: 0.5vh;
+    background-color: white;
+    border-radius: 25px;
+}
+
+#ticketnew {
+    border-radius: 5vh;
+    height: 85vh;
+    width: 180vh;
+    background-color: #545454;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+#ticketnew h1{
+    font-size: 8vh;
+    color: white;
+    margin-bottom: -1vh;
+}
+
+#datos input{
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #153f7d;
+    border: none;
+    border-radius: 10vh;
+    height: 8vh;
+    text-align: center;
+    margin: 2vh 2vh;
+}
+
+#datos button{
+    border: none;
+    cursor: pointer;
+    background-color: #153f7d;
+    border-radius: 10vh;
+    height: 8vh;
+    text-align: center;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    width: 30vh;
+    transition: 0.3s ease-in-out;
+}
+
+#datos button:hover{
+    transform: translateY(-10px);
+}
+
+#datos input::placeholder{
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#name{
+    width: 45vh;
+}
+
+#id{
+    width: 45vh;
+}
+
+#text{
+    width: 150vh;
+    height: 40vh;
+    border-radius: 10vh;
+    border: none;
+    font-size: large;
+}
+
+#Send{
+    margin-top: 3vh;
+    border: none;
+    cursor: pointer;
+    background-color: #231f20;
+    border-radius: 10vh;
+    height: 8vh;
+    text-align: center;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    width: 30vh;
+    transition: 0.3s ease-in-out;
+}
+
+#Send:hover {
+    transform: translateY(-10px);  
+}
