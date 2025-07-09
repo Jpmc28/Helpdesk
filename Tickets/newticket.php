@@ -16,7 +16,7 @@
         <div id="datos">
         <input type="text" name="full_name" placeholder="Your full name" id="name" maxlength="40" required>
         <label class="custom-btn" id="uploadBtn" for="fileInput"><div id="pictures">Upload Pictures</div></label>
-        <input type="file" id="fileInput">
+        <input type="file" id="fileInput" name="picture" accept="image/*">
         <input type="text" name="honor_id" placeholder="Your Honor Id" id="id" maxlength="9" required>
         </div>
         <div>
@@ -26,7 +26,7 @@
     </div>
     </form>
     <footer id="marca_de_propiedad">
-        <p>Designed by Juan Martin (Filed Master) @Colombia</p>
+        <p>Designed by Juan Martin (Field Master) @Colombia</p>
     </footer>
     <script>
     const fileInput = document.getElementById('fileInput');

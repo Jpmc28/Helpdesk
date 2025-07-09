@@ -5,22 +5,10 @@ include "conexionbd.php";
 $full_name    = $_POST['full_name'];
 $honor_id     = $_POST['honor_id'];
 $problem_text = $_POST['problem_text'];
-
-$picture_path = "";
-
-// Procesar imagen si se subió
+//imagen subir
+$picture_blob = null;
 if (isset($_FILES['picture']) && $_FILES['picture']['error'] === 0) {
-    $upload_dir = "../uploads/";
-    if (!is_dir($upload_dir)) {
-        mkdir($upload_dir, 0777, true);
-    }
-
-    $picture_name = basename($_FILES["picture"]["name"]);
-    $picture_path = $upload_dir . uniqid() . "_" . $picture_name;
-
-    if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $picture_path)) {
-        die("❌ Error al subir la imagen.");
-    }
+    $picture_blob = file_get_contents($_FILES['picture']['tmp_name']);
 }
 
 // Insertar en la base de datos
@@ -28,7 +16,7 @@ $sql = "INSERT INTO tickets (FullName, HonorId, ProblemText, Pictures, StartDate
         VALUES (?, ?, ?, ?, NOW())";
 
 $stmt = $conexion->prepare($sql);
-$stmt->bind_param("ssss", $full_name, $honor_id, $problem_text, $picture_path);
+$stmt->bind_param("ssss", $full_name, $honor_id, $problem_text, $picture_blob);
 
 if ($stmt->execute()) {
     // Obtener el ID autoincremental generado
