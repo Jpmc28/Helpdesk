@@ -32,39 +32,50 @@ unset($_SESSION['ticketError']);
     </form>
 
     <?php if ($ticketInfo): ?>
-    <div class="ticket-container">
-        <div class="ticket-header">
-            <strong>Atendida por: <?php echo !empty($ticketInfo['NameUser']) ? htmlspecialchars($ticketInfo['NameUser']) : 'No asignado';?></strong> 
-            <span><strong>Honor Id: <?php echo !empty($ticketInfo['HonorIdIt']) ? htmlspecialchars($ticketInfo['HonorIdIt']) : 'No asignado';?></strong> </span>
-        </div>
+        <div id="ticketModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
 
-        <div class="ticket-problem">
-            <h3>Your Ticket:</h3>
-            <?php echo nl2br(htmlspecialchars($ticketInfo['ProblemText'])); ?>
-        </div>
-
-        <div class="ticket-result">
-            <h3>Answer IT:</h3>
-            <?php echo !empty($ticketInfo['ResulText']) ? htmlspecialchars($ticketInfo['ResulText']) : 'Sin Información'; ?>
-        </div>
-        <div id="statuspictures">
-            <div class="status-container">
-                <div class="ticket-status">
-                    <?php echo !empty($ticketInfo['State']) ? htmlspecialchars($ticketInfo['State']) : 'Estado no asignado'; ?>
+                <div class="ticket-header">
+                    <strong>Atendida por: <?php echo !empty($ticketInfo['NameUser']) ? htmlspecialchars($ticketInfo['NameUser']) : 'No asignado';?></strong> 
+                    <span><strong>Honor Id: <?php echo !empty($ticketInfo['HonorIdIt']) ? htmlspecialchars($ticketInfo['HonorIdIt']) : 'No asignado';?></strong> </span>
                 </div>
-
-                <div class="ticket-actions">
-                    <?php if (!empty($ticketInfo['PicturesIt'])): ?>
-                        <a href="data:image/jpeg;base64,<?php echo base64_encode($ticketInfo['PicturesIt']); ?>" download="ticket_<?php echo $ticketInfo['IdTicket']; ?>.jpg">
-                            <button class="btn-download">Download Pictures</button>
-                        </a>
-                    <?php else: ?>
-                        <button disabled class="btn-disabled">No Picture Uploaded</button>
-                    <?php endif; ?>
+                <hr>
+                <div class="ticket-problem">
+                    <h3>Your Ticket:</h3>
+                    <?php echo nl2br(htmlspecialchars($ticketInfo['ProblemText'])); ?>
+                </div>
+                <hr>
+                <div class="ticket-result">
+                    <h3>Answer IT:</h3>
+                    <?php echo !empty($ticketInfo['ResulText']) ? htmlspecialchars($ticketInfo['ResulText']) : 'Sin Información'; ?>
+                </div>
+                <hr>
+                <div class="status-container">
+                    <div class="ticket-status">
+                        <?php echo !empty($ticketInfo['State']) ? htmlspecialchars($ticketInfo['State']) : 'Estado no asignado'; ?>
+                    </div>
+                    <div class="ticket-actions">
+                        <?php if (!empty($ticketInfo['PicturesIt'])): ?>
+                            <a href="data:image/jpeg;base64,<?php echo base64_encode($ticketInfo['PicturesIt']); ?>" download="ticket_<?php echo $ticketInfo['IdTicket']; ?>.jpg">
+                                <button class="btn-download">Download Pictures</button>
+                            </a>
+                        <?php else: ?>
+                            <button disabled class="btn-disabled">No Picture Uploaded</button>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <script>
+            window.onload = function () {
+                document.getElementById("ticketModal").style.display = "block";
+            }
+
+            function closeModal() {
+                document.getElementById("ticketModal").style.display = "none";
+            }
+        </script>
     <?php elseif ($ticketError): ?>
         <p class="error"><?php echo $ticketError; ?></p>
     <?php endif; ?>
