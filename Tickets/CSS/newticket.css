@@ -126,3 +126,6 @@ label{
     align-items: center;
     justify-content: center;
 }
+img{
+    margin-bottom: 2vh;
+}

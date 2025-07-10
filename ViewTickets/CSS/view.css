@@ -16,3 +16,126 @@ html{
     color: white;
     font-size: 0.9em;
 }
+
+#busqueda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #545454;
+    width: 180vh;
+    height: 30vh;
+    border-radius: 5vh;
+    flex-direction: column; 
+}
+#busqueda h1{
+    font-size: 8vh;
+    color: white;
+    margin-bottom: -1vh;
+}
+hr{
+    width: 160vh;
+    height: 0.5vh;
+    background-color: white;
+    border-radius: 25px;
+}
+#ticketid{
+    background-color: #153f7d;
+    border: none;
+    border-radius: 3vh;
+    text-align: center;
+    width: 35vh;
+    font-size: medium;
+    color: white;
+    height: 6vh;
+}
+#Check{
+    background-color:#0a7b0b;
+    border: none;
+    border-radius: 3vh;
+    text-align: center;
+    color: white;
+    width: 35vh;
+    font-size: medium;
+    font-weight: bold;
+    height: 6vh;    
+}
+#busqueda input{
+    margin: 2vh 20vh;
+}
+#busqueda input::placeholder{
+    color: white;
+    font-size: medium;
+}
+img{
+    margin-bottom: 2vh;
+}
+.ticket-container{
+    margin-top: 3vh;
+    padding-top: 2vh;
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180vh;
+    height: auto;
+    border-radius: 5vh;
+    flex-direction: column; 
+}
+.ticket-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #153f7d;
+    border-radius: 5vh;
+    height: 8vh;
+}
+.ticket-header strong{
+    margin: 2vh 23vh;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}
+#statuspictures{
+    display: flex;
+}
+.ticket-problem{
+    padding-bottom: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    width: 165vh;
+    border-radius: 5vh;
+    color: white;
+    margin-top: 2vh;
+    background-color: #153f7d;
+}
+.ticket-result{
+    padding-bottom: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    width: 165vh;
+    border-radius: 5vh;
+    color: white;
+    margin-top: 2vh;
+    background-color: #545454;
+}
+.status-container {
+    display: flex;
+    justify-content: space-between; /* espacio proporcional entre los dos */
+    align-items: center;            /* verticalmente alineados */
+    gap: 20px;                      /* espacio entre ellos si hay mucho texto */
+    margin-top: 15px;
+}
+
+.ticket-status {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;                        /* ocupa espacio proporcional */
+}
+
+.ticket-actions {
+    flex: 1;                        /* también ocupa espacio proporcional */
+    text-align: right;             /* alinea el botón a la derecha */
+}
+
+
