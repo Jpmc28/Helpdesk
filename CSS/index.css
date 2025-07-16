@@ -1,0 +1,83 @@
+html{
+    height: 100vh;
+    width: 100%;
+    background-color: #182d3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans';
+}
+
+#Honor{
+    font-size: larger;
+    height: 10vh;
+    width: 80vh;
+    background-color: black;
+    border-radius: 5vh;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 2vh;
+}
+#Honor, h1{
+    color: white;
+}
+
+#information_text{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 5vh;
+    width: 70vh;
+    height: 40vh;
+    font-size: small;
+    display: flex;
+    background-color: #d9d9d9;
+    border-radius: 5vh;
+}
+#information{
+    color: black;
+}
+
+#marca_de_propiedad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1vh 2vh;
+    color: white;
+    font-size: 0.9em;
+}
+
+
+#newticket{
+    font-size: medium;
+    width: 20vh;
+    background-color: #545454;
+    border: none;
+    height: 10vh;
+    border-radius: 2vh;
+    margin: 2vh 2vh;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#newticket:hover {
+    transform: translateY(-10px);
+}
+
+#viewticket{
+    font-size: medium;
+    font-weight: bold;
+    width: 20vh;
+    background-color: white;
+    border: none;
+    height: 10vh;
+    border-radius: 2vh;
+    margin: 2vh 2vh;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#viewticket:hover {
+    transform: translateY(-10px);
+}
