@@ -2,9 +2,9 @@
 
 #conexion a la bd
 
-$host = "localhost";
-$user = "root";
-$password = "S0p0rt3!";
+$host = "10.48.137.136";
+$user = "ItHonor";
+$password = "S0P0RT3!";
 $database = "helpdesk";
 
 $conexion = new mysqli($host, $user, $password, $database);

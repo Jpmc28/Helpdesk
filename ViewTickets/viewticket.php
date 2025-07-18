@@ -82,7 +82,7 @@ unset($_SESSION['ticketError']);
     <?php endif; ?>
 
     <footer id="marca_de_propiedad">
-        <p>Designed by Juan Martin (Field Master) @Colombia</p>
+        <p>Designed by Juan Martin (It Assistent) @Colombia</p>
     </footer>
 </body>
 </html>
